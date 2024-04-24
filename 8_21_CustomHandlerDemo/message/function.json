@@ -1,0 +1,22 @@
+{
+    "bindings": [
+      {
+        "type": "httpTrigger",
+        "direction": "in",
+        "name": "req",
+        "methods": ["post"]
+      },
+      {
+        "type": "http",
+        "direction": "out",
+        "name": "$return"
+      },
+      {
+        "type": "table",
+        "name": "message",
+        "direction": "out",
+        "tableName": "messages",
+        "connection": "AzureWebJobsStorage"
+      }
+    ]
+  }
